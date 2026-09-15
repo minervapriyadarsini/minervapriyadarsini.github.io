@@ -1,0 +1,56 @@
+/* Homepage-only styling. Other website pages continue to use styles.css. */
+.home-page{margin:0;background:#fff;color:#17324f;font-family:Arial,Helvetica,sans-serif}
+.home-header{background:#fff;border-bottom:1px solid #e1e7ec}
+.home-nav{max-width:1320px;margin:auto;min-height:84px;padding:12px 34px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.home-brand{text-decoration:none;color:#102d50;display:flex;flex-direction:column}
+.home-brand strong{font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.1}
+.home-brand span{font-size:14px;margin-top:6px;color:#263f5c}
+.home-links{display:flex;gap:38px;align-items:center}
+.home-links a{position:relative;text-decoration:none;color:#17324f;font-weight:600;font-size:15px;padding:10px 0}
+.home-links a.active:after{content:"";position:absolute;left:0;right:0;bottom:1px;height:2px;background:#1d6db3}
+
+.hero-banner{position:relative;min-height:500px;overflow:hidden;background:#f5f7f8}
+.hero-photo{position:absolute;inset:0;background-image:url("assets/minerva-home.png");background-repeat:no-repeat;background-size:auto 100%;background-position:right center;background-color:#f7f9fa}
+.hero-fade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(250,251,252,1) 0%,rgba(250,251,252,.98) 34%,rgba(250,251,252,.86) 48%,rgba(250,251,252,.20) 63%,rgba(250,251,252,0) 72%)}
+.hero-inner{position:relative;z-index:1;max-width:1320px;margin:auto;padding:68px 34px 58px}
+.hero-copy{width:min(650px,50vw)}
+.hero-kicker{text-transform:uppercase;letter-spacing:.23em;font-weight:700;font-size:13px;color:#587694;margin:0 0 17px}
+.hero-copy h1{font-family:Georgia,"Times New Roman",serif;font-size:47px;line-height:1.08;letter-spacing:-.02em;color:#102d50;margin:0 0 20px}
+.hero-text{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.62;color:#213b58;margin:0 0 27px;max-width:625px}
+.hero-button{display:inline-flex;align-items:center;gap:28px;background:#102f55;color:white;text-decoration:none;padding:14px 25px;border-radius:4px;font-size:15px;font-weight:700}
+.hero-button:hover{background:#174571}
+
+.home-interests{max-width:1320px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);padding:24px 34px 20px}
+.home-interests article{text-align:center;min-height:155px;padding:12px 24px 18px;border-right:1px solid #d8e0e7}
+.home-interests article:last-child{border-right:0}
+.topic-icon{width:58px;height:58px;margin:0 auto 10px;border-radius:50%;display:grid;place-items:center;background:#e8f2fc;color:#103b68;font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:20px;border:1px solid #dceaf7}
+.home-interests h2{font-size:19px;color:#102f55;margin:8px 0 7px}
+.home-interests p{margin:0;color:#63758a;font-size:14px;line-height:1.35}
+
+.home-intro{border-top:1px solid #dfe5ea;max-width:1220px;margin:0 auto;padding:28px 34px 42px;text-align:center}
+.home-intro p{font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.6;color:#263e59;margin:0 auto 18px;max-width:850px}
+.home-intro a{display:inline-flex;gap:20px;border:1px solid #193b61;border-radius:5px;padding:11px 22px;text-decoration:none;color:#173657;font-weight:700;font-size:14px}
+
+@media(max-width:900px){
+  .home-nav{align-items:flex-start;flex-direction:column}
+  .home-links{gap:20px;flex-wrap:wrap}
+  .hero-banner{min-height:720px}
+  .hero-photo{background-size:auto 62%;background-repeat:no-repeat;background-position:center bottom;background-color:#f6f8fa}
+  .hero-fade{background:linear-gradient(180deg,rgba(250,251,252,.99) 0%,rgba(250,251,252,.96) 44%,rgba(250,251,252,.15) 70%,rgba(250,251,252,0) 100%)}
+  .hero-copy{width:100%;max-width:650px}
+  .hero-copy h1{font-size:40px}
+  .home-interests{grid-template-columns:1fr 1fr}
+  .home-interests article:nth-child(2){border-right:0}
+  .home-interests article:nth-child(-n+2){border-bottom:1px solid #d8e0e7}
+}
+@media(max-width:560px){
+  .home-nav{padding:14px 20px}
+  .home-brand strong{font-size:23px}
+  .home-links{gap:14px}
+  .hero-inner{padding:45px 20px}
+  .hero-copy h1{font-size:34px}
+  .hero-text{font-size:15px}
+  .home-interests{grid-template-columns:1fr;padding:18px 20px}
+  .home-interests article{border-right:0;border-bottom:1px solid #d8e0e7}
+  .home-interests article:last-child{border-bottom:0}
+}
